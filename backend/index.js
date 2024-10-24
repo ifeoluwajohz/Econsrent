@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 const route = require("./routes/route");
 const adminRoute = require("./routes/adminRoute");
+const cors = require('cors')
+// CORS Configuration
+app.use(cors({
+  origin: '*',
+  credentials: true
+}));
 
 
 
